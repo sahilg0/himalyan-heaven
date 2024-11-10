@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himachal Heaven - Travel Vouchers</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #e6f7ff; /* Light blue background */
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            color: #004d4d;
+            background-color: #48aeb9; /* Medium blue background */
+            border-radius: 10px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #fff;
+        }
+
+        .filter-bar {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .filter-bar input[type="text"] {
+            padding: 10px;
+            width: 70%;
+            max-width: 400px;
+            font-size: 1em;
+            border: 1px solid #80ced6;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .vouchers-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .voucher {
+            flex: 1 1 calc(25% - 15px);
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 15px;
+            transition: transform 0.2s;
+            border: 3px solid #80ced6;
+        }
+
+        .voucher:hover {
+            transform: scale(1.03);
+        }
+
+        .voucher img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .voucher-content {
+            padding: 10px;
+            background-color: #e0f7fa; 
+        }
+
+        .voucher h3 {
+            font-size: 1.2em;
+            color: #004d4d;
+            margin-bottom: 10px;
+        }
+
+        .voucher p {
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .voucher .price, .voucher .date {
+            font-weight: bold;
+            color: #006666;
+        }
+
+        .enroll-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #006666;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+
+        .enroll-button:hover {
+            background-color: #004d4d;
+        }
+
+        @media (max-width: 768px) {
+            .voucher {
+                flex: 1 1 calc(50% - 15px);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .voucher {
+                flex: 1 1 100%;
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #80ced6;
+            color: #fff;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        a {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Travel Vouchers - Himachal Heaven</h1>
+    </header>
+
+    <div class="filter-bar">
+        <input type="text" id="filterInput" placeholder="Search by location or date...">
+    </div>
+
+    <div class="vouchers-container" id="vouchersContainer">
+        <div class="voucher" data-location="Shimla" data-date="15th Nov 2024">
+            <img src="Shimla voucher.jpg" alt="Shimla Tour">
+            <div class="voucher-content">
+                <h3>Shimla Getaway</h3>
+                <p class="date">Date: 15th Nov 2024</p>
+                <p class="price">Price: ₹4,500</p>
+                <a href="enroll.html" class="enroll-button">Enroll Now</a>
+            </div>
+        </div>
+
+        <div class="voucher" data-location="Manali" data-date="25th Dec 2024">
+            <img src="Manali voucher.png" alt="Manali Adventure">
+            <div class="voucher-content">
+                <h3>Manali Adventure</h3>
+                <p class="date">Date: 25th Dec 2024</p>
+                <p class="price">Price: ₹6,000</p>
+                <a href="enroll.html" class="enroll-button">Enroll Now</a>
+            </div>
+        </div>
+
+        <div class="voucher" data-location="Dharamshala" data-date="10th Jan 2025">
+            <img src="Dharamshala voucher.jpg" alt="Dharamshala Excursion">
+            <div class="voucher-content">
+                <h3>Dharamshala Excursion</h3>
+                <p class="date">Date: 10th Jan 2025</p>
+                <p class="price">Price: ₹5,200</p>
+                <a href="enroll.html" class="enroll-button">Enroll Now</a>
+            </div>
+        </div>
+
+        <div class="voucher" data-location="Kullu" data-date="5th Feb 2025">
+            <img src="kullu voucher.jpg" alt="Kullu Exploration">
+            <div class="voucher-content">
+                <h3>Kullu Exploration</h3>
+                <p class="date">Date: 5th Feb 2025</p>
+                <p class="price">Price: ₹3,800</p>
+                <a href="enroll.html" class="enroll-button">Enroll Now</a>
+            </div>
+        </div>
+
+        <div class="voucher" data-location="Spiti Valley" data-date="20th Mar 2025">
+            <img src="Sptti valley voucher.webp" alt="Spiti Valley Trek">
+            <div class="voucher-content">
+                <h3>Spiti Valley Trek</h3>
+                <p class="date">Date: 20th Mar 2025</p>
+                <p class="price">Price: ₹10000</p>
+                <a href="enroll.html" class="enroll-button">Enroll Now</a>
+            </div>
+        </div>
+
+        <div class="voucher" data-location="Kasol" data-date="15th Apr 2025">
+            <img src="kasol voucher.jpg" alt="Kasol Retreat">
+            <div class="voucher-content">
+                <h3>Kasol Retreat</h3>
+                <p class="date">Date: 15th Apr 2025</p>
+                <p class="price">Price: ₹4,000</p>
+                <a href="enroll.html" class="enroll-button">Enroll Now</a>
+            </div>
+        </div>
+
+        <div class="voucher" data-location="Tirthan Valley" data-date="10th May 2025">
+            <img src="Tirthan valley voucher.jpg" alt="Tirthan Valley Nature Walk">
+            <div class="voucher-content">
+                <h3>Tirthan Valley Nature Walk</h3>
+                <p class="date">Date: 10th May 2025</p>
+                <p class="price">Price: ₹6500</p>
+                <a href="enroll.html" class="enroll-button">Enroll Now</a>
+            </div>
+        </div>
+
+        <div class="voucher" data-location="Kinnaur" data-date="30th May 2025">
+            <img src="kinnaur travel voucher.png" alt="Kinnaur Adventure">
+            <div class="voucher-content">
+                <h3>Kinnaur Adventure</h3>
+                <p class="date">Date: 30th May 2025</p>
+                <p class="price">Price: ₹7,200</p>
+                <a href="enroll.html" class="enroll-button">Enroll Now</a>
+            </div>
+        </div>
+    </div>
+    <a href="index.html">Back to home</a>
+    <footer>
+        <p>© 2024 Himachal Heaven. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('filterInput').addEventListener('input', function() {
+            let filter = this.value.toLowerCase();
+            let vouchers = document.querySelectorAll('.voucher');
+            
+            vouchers.forEach(function(voucher) {
+                let location = voucher.dataset.location.toLowerCase();
+                let date = voucher.dataset.date.toLowerCase();
+                
+                if (location.includes(filter) || date.includes(filter)) {
+                    voucher.style.display = '';
+                } else {
+                    voucher.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentic Himachali Dishes</title>
+    <style>
+        body {
+            background-color: #e6f7ff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .heading {
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            color: white;
+            padding: 20px;
+            background-color: #48aeb9;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 1200px;
+            margin-bottom: 20px;
+        }
+        .dish-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .dish-card {
+            width: 100%;
+            max-width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #b6c9fb;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, background-color 0.3s;
+            text-align: center;
+        }
+        .dish-card:hover {
+            transform: translateY(-5px);
+            background-color: #e0f7e9;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .dish-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #ddd;
+            transition: transform 0.3s;
+        }
+
+        .dish-card:hover img {
+            transform: scale(1.05);
+        }
+        .dish-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #005f73;
+            padding: 15px 0;
+        }
+
+        .dish-description {
+            padding: 0 15px 15px;
+            color: #555555;
+            font-size: 16px;
+        }
+        .zomato-button {
+            display: inline-block;
+            margin: 15px;
+            padding: 10px 15px;
+            background-color: #e63946;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .zomato-button:hover {
+            background-color: #d62828;
+        }
+        a {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="heading">Authentic Himachali Dishes</div>
+
+    <div class="dish-container">
+        <div class="dish-card">
+            <img src="Madra.jpg" alt="Madra">
+            <div class="dish-title">Madra</div>
+            <div class="dish-description">A chickpea curry rich in yogurt and spices, often served during traditional festivals.</div>
+            <a href="https://www.zomato.com/restaurant-link-madra" class="zomato-button" target="_blank">Order Madra on Zomato</a>
+        </div>
+        <div class="dish-card">
+            <img src="Dham.jpg" alt="Dham">
+            <div class="dish-title">Dham</div>
+            <div class="dish-description">A celebratory meal with rice, dal, rajma, and sweetened curd, served on leaf plates.</div>
+            <a href="https://www.zomato.com/restaurant-link-dham" class="zomato-button" target="_blank">Order Dham on Zomato</a>
+        </div>
+        <div class="dish-card">
+            <img src="Siddu.jpg" alt="Siddu">
+            <div class="dish-title">Siddu</div>
+            <div class="dish-description">Steamed bread stuffed with a savory filling, usually enjoyed with ghee and dal.</div>
+            <a href="https://www.zomato.com/restaurant-link-siddu" class="zomato-button" target="_blank">Order Siddu on Zomato</a>
+        </div>
+        <div class="dish-card">
+            <img src="Bhey.jpg" alt="Bhey">
+            <div class="dish-title">Bhey</div>
+            <div class="dish-description">A crunchy stir-fried dish made with lotus stem, seasoned with spices and herbs.</div>
+            <a href="https://www.zomato.com/restaurant-link-bhey" class="zomato-button" target="_blank">Order Bhey on Zomato</a>
+        </div>
+        <div class="dish-card">
+            <img src="Channa madra.jpg" alt="Chana Madra">
+            <div class="dish-title">Chana Madra</div>
+            <div class="dish-description">Chickpeas cooked in a tangy yogurt-based sauce with spices.</div>
+            <a href="https://www.zomato.com/restaurant-link-chana-madra" class="zomato-button" target="_blank">Order Chana Madra on Zomato</a>
+        </div>
+        <div class="dish-card">
+            <img src="Kullu trout.jpg" alt="Kullu Trout">
+            <div class="dish-title">Kullu Trout</div>
+            <div class="dish-description">Fresh trout marinated with spices and shallow-fried, a specialty of Kullu Valley.</div>
+            <a href="https://www.zomato.com/restaurant-link-kullu-trout" class="zomato-button" target="_blank">Order Kullu Trout on Zomato</a>
+        </div>
+        <div class="dish-card">
+            <img src="Kaale channe.jpg" alt="Kaale Chane">
+            <div class="dish-title">Kaale Chane</div>
+            <div class="dish-description">Spicy black chickpeas often served with rice during Dham.</div>
+            <a href="https://www.zomato.com/restaurant-link-kaale-chane" class="zomato-button" target="_blank">Order Kaale Chane on Zomato</a>
+        </div>
+        <div class="dish-card">
+            <img src="Aktori.webp" alt="Aktori">
+            <div class="dish-title">Aktori</div>
+            <div class="dish-description">A festive cake-like dish made from buckwheat flour, popular in Lahaul-Spiti.</div>
+            <a href="https://www.zomato.com/restaurant-link-aktori" class="zomato-button" target="_blank">Order Aktori on Zomato</a>
+        </div>
+        <div class="dish-card">
+            <img src="kadi.webp" alt="Kadi">
+            <div class="dish-title">Kadi</div>
+            <div class="dish-description">A tangy yogurt-based curry with gram flour dumplings, served with rice.</div>
+            <a href="https://www.zomato.com/restaurant-link-kadi" class="zomato-button" target="_blank">Order Kadi on Zomato</a>
+        </div>
+        <div class="dish-card">
+            <img src="Babru.jpg" alt="Babru">
+            <div class="dish-title">Babru</div>
+            <div class="dish-description">A Himachali take on stuffed puris, filled with black gram paste.</div>
+            <a href="https://www.zomato.com/restaurant-link-babru" class="zomato-button" target="_blank">Order Babru on Zomato</a>
+        </div>
+    </div>
+    <a href="index.html">Back to home</a>
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Activities in Himachal Pradesh</title>
+    <style>
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color:#e6f7ff ;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color:#48aeb9 ;
+            border-radius: 10px;
+            color: white;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .activity-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        .activity {
+            background-color: #b6c9fb;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            overflow: hidden;
+            width: 300px;
+        }
+        .activity img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .activity h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+            padding: 0 10px;
+        }
+        .activity p {
+            padding: 0 10px 10px;
+        }
+        form {
+            margin: 20px 0;
+            padding: 20px;
+            background: #e9ecef;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        form div {
+            margin-bottom: 15px;
+        }
+        form input, form select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 2px solid #3498db;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+        form input:focus, form select:focus {
+            border-color: #2980b9;
+            outline: none;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color:#1abc9c;
+        }
+        #submissionResult {
+            margin-top: 20px;
+            padding: 20px;
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 10px;
+            display: none; 
+        }
+        #priceDisplay, #qrCode {
+            margin-top: 15px;
+            padding: 10px;
+            border: 1px solid #3498db;
+            border-radius: 5px;
+            display: none; 
+            text-align: center;
+        }
+        #qrCode img {
+            width: 150px;
+            height: 150px;
+        }
+        .activity button {
+    display: block;
+    margin: 10px auto;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 80%; 
+}
+
+.activity button:hover {
+    background-color: #1abc9c;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Book Activities in Himachal Pradesh</h1>
+    </header>
+
+    <div class="activity-container">
+        <div class="activity">
+            <img src="Trecking in truind.jpg" alt="Trekking">
+            <h2>Trekking in Triund</h2>
+            <p>Experience the stunning views of the Dhauladhar range on this popular trek from McLeod Ganj.</p>
+            <a href="#bookingSection"><button>Book Now</button></a>
+        </div>
+        <div class="activity">
+            <img src="Paragliding in bir billing.jpg" alt="Paragliding">
+            <h2>Paragliding in Bir Billing</h2>
+            <p>Enjoy breathtaking aerial views while paragliding in one of the world's best paragliding spots.</p>
+            <a href="#bookingSection"><button>Book Now</button></a>
+        </div>
+        <div class="activity">
+            <img src="Riverrafting in kullu.webp" alt="River Rafting">
+            <h2>River Rafting in Kullu</h2>
+            <p>Get your adrenaline pumping while navigating the rapids of the Beas River.</p>
+            <a href="#bookingSection"><button>Book Now</button></a>
+        </div>
+        <div class="activity">
+            <img src="skiing in kufri.jpg" alt="Skiing">
+            <h2>Skiing in Kufri</h2>
+            <p>Hit the slopes and enjoy winter sports in this popular ski resort near Shimla.</p>
+            <a href="#bookingSection"><button>Book Now</button></a>
+        </div>
+        <div class="activity">
+            <img src="Camping in tirthan valley.webp" alt="Camping">
+            <h2>Camping in Tirthan Valley</h2>
+            <p>Experience the beauty of nature by camping beside the pristine Tirthan River.</p>
+            <a href="#bookingSection"><button>Book Now</button></a>
+        </div>
+        <div class="activity">
+            <img src="Trout fishing in kullu.JPG" alt="Fishing">
+            <h2>Trout Fishing in Kullu</h2>
+            <p>Catch fresh trout in the serene rivers of Kullu Valley, a paradise for fishing enthusiasts.</p>
+            <a href="#bookingSection"><button>Book Now</button></a>
+        </div>
+        <div class="activity">
+            <img src="Cycling in spiti valley.jpg" alt="Cycling">
+            <h2>Cycling in Spiti Valley</h2>
+            <p>Explore the rugged terrains and picturesque landscapes of Spiti Valley on two wheels.</p>
+            <a href="#bookingSection"><button>Book Now</button></a>
+        </div>
+        <div class="activity">
+            <img src="Yoga retreat in dharamshala.jpg" alt="Yoga Retreat">
+            <h2>Yoga Retreat in Dharamshala</h2>
+            <p>Join a yoga retreat and rejuvenate your body and mind in the peaceful surroundings of Dharamshala.</p>
+            <a href="#bookingSection"><button>Book Now</button></a>
+        </div>
+        <div class="activity">
+            <img src="Zip linning in solang valley.jpg" alt="Zip-lining">
+            <h2>Zip-lining in Solang Valley</h2>
+            <p>Experience the thrill of zip-lining across the stunning landscapes of Solang Valley.</p>
+            <a href="#bookingSection"><button>Book Now</button></a>
+        </div>
+        <div class="activity">
+            <img src="Horse ridding in manali.jpg" alt="Horse Riding">
+            <h2>Horse Riding in Manali</h2>
+            <p>Enjoy horse riding through scenic trails in the lush green valleys of Manali.</p>
+            <a href="#bookingSection"><button>Book Now</button></a>
+        </div>
+    </div>
+<form id="bookingSection">
+    <h2>Book Your Activity</h2>
+        <div>
+            <label for="activity">Select Activity:</label>
+            <select id="activity" required>
+                <option value="">Select an activity...</option>
+                <option value="Trekking in Triund" data-price="1500">Trekking in Triund - ₹1500</option>
+                <option value="Paragliding in Bir Billing" data-price="2500">Paragliding in Bir Billing - ₹2500</option>
+                <option value="River Rafting in Kullu" data-price="1200">River Rafting in Kullu - ₹1200</option>
+                <option value="Skiing in Kufri" data-price="2000">Skiing in Kufri - ₹2000</option>
+                <option value="Camping in Tirthan Valley" data-price="1800">Camping in Tirthan Valley - ₹1800</option>
+                <option value="Trout Fishing in Kullu" data-price="800">Trout Fishing in Kullu - ₹800</option>
+                <option value="Cycling in Spiti Valley" data-price="2200">Cycling in Spiti Valley - ₹2200</option>
+                <option value="Yoga Retreat in Dharamshala" data-price="3000">Yoga Retreat in Dharamshala - ₹3000</option>
+                <option value="Zip-lining in Solang Valley" data-price="1000">Zip-lining in Solang Valley - ₹1000</option>
+                <option value="Horse Riding in Manali" data-price="700">Horse Riding in Manali - ₹700</option>
+            </select>
+        </div>
+        <div id="priceDisplay"><strong>Price: </strong><span id="selectedPrice"></span></div>
+        <div>
+            <label for="age">Your Age:</label>
+            <input type="number" id="age" required min="1" max="120">
+        </div>
+        <button type="submit">Book Now</button>
+    </form>
+    <div id="submissionResult">
+        <h2>Your Booking Details</h2>
+        <p><strong>Selected Activity:</strong> <span id="resultActivity"></span></p>
+        <p><strong>Price:</strong> ₹<span id="resultPrice"></span></p>
+        <p><strong>Your Age:</strong> <span id="resultAge"></span></p>
+    </div>
+    <div id="qrCode">
+        <h2>Scan to Confirm Your Booking</h2>
+        <img src="https://via.placeholder.com/150" alt="QR Code">
+    </div>
+
+    <a href="index.html">Back to Home</a>
+
+    <script>
+        document.getElementById('activity').addEventListener('change', function() {
+            const selectedOption = this.options[this.selectedIndex];
+            const price = selectedOption.getAttribute('data-price');
+
+            if (price) {
+                document.getElementById('selectedPrice').innerText = `₹${price}`;
+                document.getElementById('priceDisplay').style.display = 'block';
+            } else {
+                document.getElementById('priceDisplay').style.display = 'none';
+            }
+        });
+        document.getElementById('bookingForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            const activity = document.getElementById('activity').value;
+            const age = document.getElementById('age').value;
+            const selectedOption = document.getElementById('activity').options[document.getElementById('activity').selectedIndex];
+            const price = selectedOption.getAttribute('data-price');
+
+           
+            document.getElementById('resultActivity').innerText = activity;
+            document.getElementById('resultAge').innerText = age;
+            document.getElementById('resultPrice').innerText = price;
+
+           
+            document.getElementById('submissionResult').style.display = 'block';
+            document.getElementById('qrCode').style.display = 'block';
+
+          
+            document.getElementById('bookingForm').reset();
+            document.getElementById('priceDisplay').style.display = 'none'; 
+        });
+    </script>
+</body>
+</html>

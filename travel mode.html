@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modes of Travel</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e6f7ff;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #48aeb9;
+            border-radius: 10px;
+            color: white;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        section {
+            margin: 20px 0;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .travel-option {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #e7f3fe;
+            border-left: 4px solid #3498db;
+        }
+        form {
+            margin: 20px 0;
+            padding: 20px;
+            background: #e9ecef;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        form div {
+            margin-bottom: 15px;
+        }
+        form input, form select, form textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 2px solid #3498db;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+        form input:focus, form select:focus, form textarea:focus {
+            border-color: #2980b9;
+            outline: none;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        #submissionResult {
+            margin-top: 20px;
+            padding: 20px;
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 10px;
+            display: none; 
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background: #6e7f80;
+            border-radius: 10px;
+            color: white;
+        }
+        footer h3 {
+            margin-bottom: 10px;
+        }
+        footer ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        footer ul li {
+            margin: 5px 0;
+        }
+        footer ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        footer ul li a:hover {
+            color: #3498db;
+            text-decoration: underline;
+        }
+        a {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Modes of Travel in Himachal Pradesh</h1>
+    </header>
+
+    <section>
+        <h2>Train Travel</h2>
+        <div class="travel-option">
+            <p>Traveling by train is a scenic way to explore the beautiful landscapes of Himachal Pradesh. You can book your tickets online through the official IRCTC website.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Bus Travel</h2>
+        <div class="travel-option">
+            <p>Buses are a popular option for intercity travel. You can find various private and state-operated buses connecting major cities in Himachal Pradesh.</p>
+            <p>Use RedBus for easy bus ticket booking.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Flight Travel</h2>
+        <div class="travel-option">
+            <p>Flights are the quickest way to reach Himachal Pradesh. Major airports include Gaggal Airport in Dharamshala and Jubbarhatti Airport in Shimla.</p>
+            <p>Various airlines offer flights to these destinations.</p>
+        </div>
+    </section>
+
+    <form id="travelForm">
+        <h2>Submit Your Travel Preference</h2>
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+        </div>
+        <div>
+            <label for="travelMode">Preferred Mode of Travel:</label>
+            <select id="travelMode" required>
+                <option value="">Select...</option>
+                <option value="train">Train</option>
+                <option value="bus">Bus</option>
+                <option value="flight">Flight</option>
+            </select>
+        </div>
+        <div>
+            <label for="comments">Comments:</label>
+            <textarea id="comments" rows="4"></textarea>
+        </div>
+        <div>
+            <label>
+                <input type="checkbox" id="receiveConfirmation"> Receive confirmation via email
+            </label>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="submissionResult">
+        <h2>Your Submitted Information</h2>
+        <p><strong>Name:</strong> <span id="resultName"></span></p>
+        <p><strong>Email:</strong> <span id="resultEmail"></span></p>
+        <p><strong>Preferred Mode of Travel:</strong> <span id="resultTravelMode"></span></p>
+        <p><strong>Comments:</strong> <span id="resultComments"></span></p>
+        <p><strong>Receive Confirmation:</strong> <span id="resultConfirmation"></span></p>
+    </div>
+
+    <footer>
+        <h3>Travel Links</h3>
+        <ul>
+            <li><a href="https://www.irctc.co.in" target="_blank">IRCTC - Train Booking</a></li>
+            <li><a href="https://www.redbus.in" target="_blank">RedBus - Bus Booking</a></li>
+            <li><a href="https://www.goindigo.in" target="_blank">IndiGo - Flight Booking</a></li>
+            <li><a href="https://www.spicejet.com" target="_blank">SpiceJet - Flight Booking</a></li>
+            <li><a href="https://www.airindia.in" target="_blank">Air India - Flight Booking</a></li>
+            <li><a href="https://www.makemytrip.com/flights" target="_blank">MakeMyTrip - Flight Booking</a></li>
+            <li><a href="http://www.aai.aero" target="_blank">Airports Authority of India</a></li>
+        </ul>
+        <a href="index.html">Back to home</a>
+    </footer>
+
+    <script>
+        document.getElementById('travelForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const travelMode = document.getElementById('travelMode').value;
+            const comments = document.getElementById('comments').value;
+            const receiveConfirmation = document.getElementById('receiveConfirmation').checked;
+            
+            document.getElementById('resultName').innerText = name;
+            document.getElementById('resultEmail').innerText = email;
+            document.getElementById('resultTravelMode').innerText = travelMode;
+            document.getElementById('resultComments').innerText = comments;
+            document.getElementById('resultConfirmation').innerText = receiveConfirmation ? "Yes" : "No";
+            
+            document.getElementById('submissionResult').style.display = 'block';
+            document.getElementById('travelForm').reset(); // Reset form after submission
+        });
+    </script>
+</body>
+</html>

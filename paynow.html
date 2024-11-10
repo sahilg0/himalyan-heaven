@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himachal Heaven - Payment Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #e6f7ff;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 15px;
+            background-color: #4db6ac;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.2em;
+            color: #fff;
+        }
+
+        .payment-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .payment-methods {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .payment-methods label {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            margin: 5px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: border 0.3s;
+        }
+
+        .payment-methods input {
+            display: none;
+        }
+
+        .payment-methods label:hover {
+            border-color: #4db6ac;
+        }
+
+        .payment-methods img {
+            max-width: 50px;
+            margin-bottom: 5px;
+        }
+
+        .qr-code {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .qr-code img {
+            max-width: 150px;
+        }
+
+        .pay-button {
+            background-color: #00897b;
+            color: #fff;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.2s;
+        }
+
+        .pay-button:hover {
+            background-color: #004d4d;
+        }
+
+        .submit-button {
+            background-color: #4db6ac;
+            color: #fff;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: none;
+            transition: background-color 0.2s;
+        }
+
+        .submit-button:hover {
+            background-color: #00897b;
+        }
+
+        .congratulations-message {
+            display: none;
+            text-align: center;
+            margin-top: 30px;
+            color: #4db6ac;
+            font-size: 1.5em;
+        }
+        a {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Complete Your Payment</h1>
+    </header>
+
+    <div class="payment-section">
+        <h3>Select Payment Method</h3>
+        <div class="payment-methods">
+            <label>
+                <input type="radio" name="payment" value="Google Pay" id="gpay">
+                <img src="g.pay.jpg" alt="Google Pay Logo">
+                Google Pay
+            </label>
+            <label>
+                <input type="radio" name="payment" value="PhonePe" id="phonepe">
+                <img src="phonepay.jpg" alt="PhonePe Logo">
+                PhonePe
+            </label>
+            <label>
+                <input type="radio" name="payment" value="Paytm" id="paytm">
+                <img src="paytyam.jpg" alt="Paytm Logo">
+                Paytm
+            </label>
+        </div>
+
+        <div class="qr-code" id="qrCodeSection">
+            <h3>Scan to Pay</h3>
+            <img src="qr-code-placeholder.jpg" alt="QR Code" id="qrCodeImage">
+        </div>
+
+        <button class="submit-button" id="submitBtn">Submit</button>
+
+        <div class="congratulations-message" id="congratulationsMessage">
+            <p>Congratulations! Let's enjoy and chill with us! Experience something new with Himachal Heaven!</p>
+        </div>
+    </div>
+    <a href="index.html">Back to home</a>
+<script>
+    document.querySelectorAll('input[name="payment"]').forEach(input => {
+        input.addEventListener('change', function() {
+            const qrCodeSection = document.getElementById('qrCodeSection');
+            const qrCodeImage = document.getElementById('qrCodeImage');
+            const selectedPaymentMethod = document.querySelector('input[name="payment"]:checked').value;
+            if (selectedPaymentMethod === 'Google Pay') {
+                qrCodeImage.src = 'qr-code-placeholder.jpg'; 
+            } else if (selectedPaymentMethod === 'PhonePe') {
+                qrCodeImage.src = 'qr-code-placeholder.jpg'; 
+            } else if (selectedPaymentMethod === 'Paytm') {
+                qrCodeImage.src = 'qr-code-placeholder.jpg'; 
+            }
+            qrCodeSection.style.display = 'block';
+            document.getElementById('submitBtn').style.display = 'block';
+        });
+    });
+    document.getElementById('submitBtn').addEventListener('click', function() {
+        document.getElementById('qrCodeSection').style.display = 'none';
+        document.getElementById('congratulationsMessage').style.display = 'block';
+    });
+</script>    
+</body>
+</html>
